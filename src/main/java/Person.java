@@ -1,5 +1,3 @@
-package by.group;
-
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -7,9 +5,24 @@ public class Person implements Serializable {
     private String name, surname;
     private int age;
 
+    public Person() {
+    }
+
     public Person(String name, String surname, int age) {
         this.name = name;
         this.surname = surname;
+        this.age = age;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public void setAge(int age) {
         this.age = age;
     }
 
@@ -40,8 +53,11 @@ public class Person implements Serializable {
 
     @Override
     public String toString() {
-        return "Person{ " + name + "  " + surname + "  " + " age=" + age + '}';
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                '}';
     }
-
 
 }
